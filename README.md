@@ -24,3 +24,5 @@ webServiceDemo
 </endpoints>
 即将两个方法发布到的webservice发布到tomcat。。。。。注意:再发布到tomcat的时候,webService标签属相,没有实现与spring的管理,
 TestWebService就是此webService的测试！
+访问：
+http://localhost:8080/WebServiceDemo/Service/hello?wsdl
