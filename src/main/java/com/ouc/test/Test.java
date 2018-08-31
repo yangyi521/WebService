@@ -3,7 +3,16 @@
  */
 package com.ouc.test;
 
+import java.io.File;
 import java.net.URL;
+
+import javax.xml.transform.Result;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
 import org.codehaus.xfire.client.Client;
 import org.w3c.dom.Document;
 
@@ -27,5 +36,18 @@ public class Test {
          System.out.println(d.getFirstChild().getTextContent());
          System.out.println(d.getElementsByTagName("groupInfoDefault").item(0).getTextContent());
          System.out.println("结果是："+results11[0].toString()); 
+         Source xmlSource = new DOMSource(d);
+       //工厂类
+       TransformerFactory factory = TransformerFactory.newInstance();
+       //转换器
+       Transformer transformer = factory.newTransformer();
+       //设置输出格式和属性
+      /* transformer.setOutputproties();*/
+       //创建结果树
+       String path = "C:\\Users\\Administrator\\Desktop\\webservice\\test.xml";
+       Result result = new StreamResult(new File(path));
+       transformer.transform(xmlSource, result);
+         //获取整个dom文件
+         System.out.println(result);
     }
 }
