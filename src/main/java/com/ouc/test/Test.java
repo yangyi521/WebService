@@ -4,10 +4,7 @@
 package com.ouc.test;
 
 import java.net.URL;
-
-import org.apache.commons.httpclient.params.HttpClientParams;
 import org.codehaus.xfire.client.Client;
-import org.codehaus.xfire.transport.http.CommonsHttpMessageSender;
 import org.w3c.dom.Document;
 
 /**
