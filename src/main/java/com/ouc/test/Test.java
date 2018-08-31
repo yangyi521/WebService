@@ -26,7 +26,7 @@ public class Test {
          //Object[] results11 = client.invoke("getHello", new Object[]{});
     	 //Object[] results11 = client.invoke("getMobileCodeInfo", new Object[]{"13780631855",""});
          Document d = (Document)results11[0];
-        
+         //要转成w3dom的形式
          System.out.println(d.getFirstChild().getTextContent());
          System.out.println(d.getElementsByTagName("groupInfoDefault").item(0).getTextContent());
          System.out.println("结果是："+results11[0].toString()); 
