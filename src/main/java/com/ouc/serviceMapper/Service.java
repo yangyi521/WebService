@@ -3,11 +3,9 @@
  */
 package com.ouc.serviceMapper;
 
-import javax.annotation.Resource;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 
-import org.apache.shiro.config.Ini;
 import org.springframework.web.context.ContextLoaderListener;
 
 import com.ouc.bean.User;
